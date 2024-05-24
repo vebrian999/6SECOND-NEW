@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6SECOND</title>
+    <link rel="stylesheet" href="assets/app.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/your-embed-code.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <!-- awal header -->
+    <header>
+      <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center justify-start rtl:justify-end">
+              <button
+                data-drawer-target="logo-sidebar"
+                data-drawer-toggle="logo-sidebar"
+                aria-controls="logo-sidebar"
+                type="button"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                <span class="sr-only">Open sidebar</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                </svg>
+              </button>
+              <a href="#" class="flex ms-2 md:me-24">
+                <img src="assets/img/new/logo.png" class="h-16 me-3" alt="FlowBite Logo" />
+                <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-black">6SECOND</span>
+              </a>
+            </div>
+            <div class="flex items-center">
+              <div class="flex items-center ms-3">
+                <div>
+                  <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="w-12 h-12 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo" />
+                  </button>
+                </div>
+                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow" id="dropdown-user">
+                  <div class="px-4 py-3" role="none">
+                    <p class="text-sm text-gray-900" role="none">Neil Sims</p>
+                    <p class="text-sm font-medium text-gray-900 truncate">neil.sims@flowbite.com</p>
+                  </div>
+                  <ul class="py-1" role="none">
+                    <li>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Profil</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- akhir header -->
+
+    <!-- awal main -->
+    <main>
+      <div id="content" class="content">
+        <div class="p-4 sm:ml-64 md:mt-10">
+          <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg mt-14">
+            <div class="mb-4 rounded bg-gray-50">
+              <div class="font-medium text-5xl my-10 text-sky-400 text-center">
+                <h1>Fill in the following data below correctly</h1>
+              </div>
+
+              <div class="flex gap-x-5">
+                <!-- awal upload -->
+                <div class="flex items-start justify-start w-1/4" style="flex-basis: 40%">
+                  <div class="bg-white px-3 py-3 shadow-2xl w-full">
+                    <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-sky-100">
+                      <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                        <svg class="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                        </svg>
+                        <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                        <p class="text-xs text-gray-500">SVG, PNG, JPG or JPEG (MAX. 4 PHOTO)</p>
+                      </div>
+                      <input id="dropzone-file" type="file" class="hidden" onchange="previewImages(event)" accept="image/*" multiple />
+                    </label>
+                    <div id="image-preview" class="mt-4 grid grid-cols-2 gap-4"></div>
+                  </div>
+                </div>
+
+                <script>
+                  let uploadedImages = []; // Array to store uploaded images
+
+                  function previewImages(event) {
+                    const files = event.target.files;
+                    const previewContainer = document.getElementById("image-preview");
+                    const maxFiles = 4; // Maximum number of files allowed
+                    for (let i = 0; i < Math.min(files.length, maxFiles); i++) {
+                      const reader = new FileReader();
+                      const file = files[i];
+                      reader.onload = function () {
+                        const image = new Image();
+                        image.src = reader.result;
+                        image.className = "max-w-full h-auto";
+                        const previewDiv = document.createElement("div");
+                        previewDiv.classList.add("relative");
+                        previewDiv.appendChild(image);
+                        const closeButton = document.createElement("button");
+                        closeButton.textContent = "Remove";
+                        closeButton.className = "absolute top-0 right-0 px-2 py-1 text-white bg-red-500 rounded";
+                        closeButton.addEventListener("click", function () {
+                          const index = uploadedImages.indexOf(file);
+                          if (index !== -1) {
+                            uploadedImages.splice(index, 1); // Remove image from uploadedImages array
+                          }
+                          previewDiv.remove(); // Remove preview when Remove button is clicked
+                        });
+                        previewDiv.appendChild(closeButton);
+                        previewContainer.appendChild(previewDiv);
+                        uploadedImages.push(file); // Add image to uploadedImages array
+                      };
+                      reader.readAsDataURL(file);
+                    }
+                  }
+                </script>
+                <!-- akhir upload -->
+
+                <!-- awal form jual -->
+
+                <form class="flex flex-col w-3/4" style="flex-basis: 60%">
+                  <div class="bg-white px-3 py-3 shadow-2xl w-full">
+                    <div class="space-y-12">
+                      <div class="border-b border-gray-900/10 pb-12">
+                        <div class="flex flex-col gap-x-6 gap-y-3">
+                          <div class="sm:col-span-4">
+                            <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
+                            <div class="mt-2">
+                              <div class="flex items-center rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+                                <input
+                                  type="text"
+                                  name="username"
+                                  id="username"
+                                  autocomplete="username"
+                                  class="block flex-1 border-0 bg-transparent py-4 px-2.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                                  placeholder="Contoh: Deden Inoen" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Bagian yang diubah -->
+                          <div class="sm:col-span-4">
+                            <label for="nbarang" class="block text-sm font-medium leading-6 text-gray-900">Nama barang</label>
+                            <div class="mt-2">
+                              <!-- Ditambahkan div flex wrapper untuk input dan icon -->
+                              <div class="flex items-center rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+                                <!-- Input field, class ditambahkan flex-1 untuk lebar penuh -->
+                                <input
+                                  id="nbarang"
+                                  name="nbarang"
+                                  type="text"
+                                  autocomplete="nbarang"
+                                  placeholder="Beri tahu nama barang anda contoh: sepatu"
+                                  class="block flex-1 border-0 bg-transparent py-4 px-2.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" />
+                                <!-- Ditambahkan span untuk ikon pensil -->
+                                <span class="inline-flex items-center px-3 text-gray-500 sm:text-sm">
+                                  <i class="fa-solid fa-pencil"></i>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Harga Barang -->
+                          <div class="sm:col-span-4">
+                            <label for="harga" class="block text-sm font-medium leading-6 text-gray-900">Harga Barang (Rp)</label>
+                            <div class="mt-2 relative rounded-md shadow-sm">
+                              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <span class="text-black sm:text-sm">Rp</span>
+                              </div>
+                              <input
+                                id="harga"
+                                name="harga"
+                                type="text"
+                                autocomplete="harga"
+                                class="block w-full rounded-md border-gray-300 pl-10 pr-10 py-4 text-gray-900 placeholder-gray-400 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                placeholder="Isi dengan angka contoh: Rp100.000"
+                                oninput="formatRupiah(this)" />
+                              <!-- Menambahkan span untuk ikon pensil di sebelah kanan input field -->
+                              <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                <span class="text-gray-500 sm:text-sm">
+                                  <i class="fa-solid fa-pencil"></i>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <script>
+                            function formatRupiah(input) {
+                              // Menghilangkan semua karakter kecuali angka
+                              var value = input.value.replace(/\D/g, "");
+
+                              // Menambahkan titik setiap tiga angka dari belakang
+                              value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+                              // Menampilkan hasil format ke input
+                              input.value = value;
+                            }
+                          </script>
+
+                          <!-- akhir Harga Barang -->
+
+                          <!-- Nomor WhatsApp/Telepon -->
+                          <div class="sm:col-span-4">
+                            <label for="whatsapp" class="block text-sm font-medium leading-6 text-gray-900">Nomor WhatsApp/Telepon</label>
+                            <div class="mt-2 relative rounded-md shadow-sm">
+                              <input
+                                id="whatsapp"
+                                name="whatsapp"
+                                type="text"
+                                autocomplete="whatsapp"
+                                class="block w-full rounded-md border-0 py-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                placeholder="Contoh: 081234567890"
+                                pattern="[0-9]*"
+                                inputmode="numeric"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+                              <!-- Menambahkan span untuk ikon pensil di sebelah kanan input field -->
+                              <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                <span class="text-gray-500 sm:text-sm">
+                                  <i class="fa-solid fa-pencil"></i>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- awal input kondisi -->
+                          <div class="sm:col-span-4">
+                            <h3 class="mb-5 text-sm font-medium text-black">Kondisi <i class="fa-solid fa-pencil ml-2 text-gray-500 sm:text-sm"></i></h3>
+
+                            <ul class="flex gap-x-4">
+                              <div class="flex flex-col gap-y-4">
+                                <li>
+                                  <input type="checkbox" id="product_baru" value="" class="hidden peer" required="" />
+                                  <label
+                                    for="product_baru"
+                                    class="flex flex-col px-5 py-2.5 text-gray-500 bg-white border-2 border-gray-200 rounded-full cursor-pointer hover:text-gray-600 peer-checked:border-sky-400 peer-checked:text-sky-400 hover:bg-gray-50">
+                                    <div class="block">
+                                      <div class="w-full text-sm font-medium">Product baru</div>
+                                    </div>
+                                  </label>
+                                </li>
+                                <li>
+                                  <input type="checkbox" id="bekas_seperti_baru" value="" class="hidden peer" />
+                                  <label
+                                    for="bekas_seperti_baru"
+                                    class="flex px-5 py-2.5 text-gray-500 bg-white border-2 border-gray-200 rounded-full cursor-pointer hover:text-gray-600 peer-checked:border-sky-400 peer-checked:text-sky-400 hover:bg-gray-50">
+                                    <div class="block">
+                                      <div class="w-full text-sm font-medium">Bekas seperti baru</div>
+                                    </div>
+                                  </label>
+                                </li>
+                                <li>
+                                  <input type="checkbox" id="t_terlalu_sering" value="" class="hidden peer" />
+                                  <label
+                                    for="t_terlalu_sering"
+                                    class="flex px-5 py-2.5 text-gray-500 bg-white border-2 border-gray-200 rounded-full cursor-pointer hover:text-gray-600 peer-checked:border-sky-400 peer-checked:text-sky-400 hover:bg-gray-50">
+                                    <div class="block">
+                                      <div class="w-full text-sm font-medium">Tidak terlalu sering digunakan</div>
+                                    </div>
+                                  </label>
+                                </li>
+                              </div>
+                              <!-- Penambahan opsi kondisi -->
+                              <div class="flex flex-col gap-y-4">
+                                <li>
+                                  <input type="checkbox" id="lepet_dikit" value="" class="hidden peer" />
+                                  <label
+                                    for="lepet_dikit"
+                                    class="flex px-5 py-2.5 text-gray-500 bg-white border-2 border-gray-200 rounded-full cursor-pointer hover:text-gray-600 peer-checked:border-sky-400 peer-checked:text-sky-400 hover:bg-gray-50">
+                                    <div class="block">
+                                      <div class="w-full text-sm font-medium">Lecet dikit tak ngaruh</div>
+                                    </div>
+                                  </label>
+                                </li>
+                                <li>
+                                  <input type="checkbox" id="retak_dikit" value="" class="hidden peer" />
+                                  <label
+                                    for="retak_dikit"
+                                    class="flex px-5 py-2.5 text-gray-500 bg-white border-2 border-gray-200 rounded-full cursor-pointer hover:text-gray-600 peer-checked:border-sky-400 peer-checked:text-sky-400 hover:bg-gray-50">
+                                    <div class="block">
+                                      <div class="w-full text-sm font-medium">Retak dikit</div>
+                                    </div>
+                                  </label>
+                                </li>
+                                <li>
+                                  <input type="checkbox" id="hancur_parah" value="" class="hidden peer" />
+                                  <label
+                                    for="hancur_parah"
+                                    class="flex px-5 py-2.5 text-gray-500 bg-white border-2 border-gray-200 rounded-full cursor-pointer hover:text-gray-600 peer-checked:border-sky-400 peer-checked:text-sky-400 hover:bg-gray-50">
+                                    <div class="block">
+                                      <div class="w-full text-sm font-medium">Hancur parah seperti bangkai</div>
+                                    </div>
+                                  </label>
+                                </li>
+                              </div>
+                              <!-- Akhir penambahan opsi kondisi -->
+                            </ul>
+                          </div>
+                          <!-- akhir input kondisi -->
+
+                          <!-- Deskripsi Barang -->
+                          <div class="sm:col-span-4">
+                            <label for="deskripsi" class="block text-sm font-medium leading-6 text-gray-900">Deskripsi Barang</label>
+                            <div class="mt-2 relative rounded-md shadow-sm">
+                              <textarea
+                                id="deskripsi"
+                                name="deskripsi"
+                                rows="5"
+                                class="block w-full px-3 rounded-md border-0 py-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                placeholder="Beri tahu pembeli mengapa kamu menjual barang ini dan detail/kondisi barang tersebut yang mungkin membuat mereka tertarik. Pembeli suka cerita yang menarik!"></textarea>
+                              <!-- Menambahkan span untuk ikon pensil di sebelah kanan input field -->
+                              <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                <span class="text-gray-500 sm:text-sm">
+                                  <i class="fa-solid fa-pencil"></i>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="sm:col-span-4">
+                            <!-- awal maps (nanti revisi)-->
+                            <iframe
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.38316713467!2d110.4076210745533!3d-7.749120676829779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59fcaac384bf%3A0xc7c2fbd090bdea5b!2sKontrakan%20Ceria!5e0!3m2!1sen!2sid!4v1716427741847!5m2!1sen!2sid"
+                              width="795"
+                              height="250"
+                              style="border: 0"
+                              allowfullscreen=""
+                              loading="lazy"
+                              referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <!-- akhir maps (nanti revisi) -->
+                          </div>
+
+                          <div class="sm:col-span-4">
+                            <h3 class="mb-5 text-sm font-medium text-black">Persetujuan:</h3>
+                            <div class="flex items-center mb-5">
+                              <input type="checkbox" id="agreement" class="mr-3" />
+                              <label for="agreement" class="text-gray-700 text-sm">Saya menyetujui syarat dan ketentuan.</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-end gap-x-6">
+                      <a href="index.html" type="button" class="text-sm font-semibold hover:text-white text-white bg-red-600 hover:bg-red-700 leading-6 rounded-md px-3 py-2">Cancel</a>
+                      <a
+                        href="#"
+                        type="submit"
+                        data-modal-target="popup-modal"
+                        data-modal-toggle="popup-modal"
+                        class="rounded-md bg-sky-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        Simpan Perubahan
+                      </a>
+                    </div>
+                  </div>
+                </form>
+
+                <!-- awal pop up validation -->
+                <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                  <div class="relative p-4 w-full max-w-md max-h-full">
+                    <div class="relative bg-white rounded-lg shadow">
+                      <button type="button" class="absolute top-3 end-2.5 bg-red-600 text-white hover:bg-red-700 hover:text-white rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                      </button>
+                      <div class="p-4 md:p-5 text-center">
+                        <i class="fa-regular fa-thumbs-up mx-auto mb-4 text-green-600" style="font-size: 3rem"></i>
+                        <h3 class="mb-5 text-lg font-normal text-gray-500">Terima kasih, informasi barang Anda telah berhasil diperbarui.</h3>
+                        <div class="flex justify-center gap-x-4">
+                          <a
+                            href="#"
+                            data-modal-hide="popup-modal"
+                            type="button"
+                            class="text-sky-400 bg-white hover:bg-sky-400 border-2 hover:text-white border-sky-400 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                            Tetap di Sini
+                          </a>
+                          <a
+                            href="index.html"
+                            id="confirm-yes"
+                            type="button"
+                            class="text-white bg-sky-400 hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-3 text-center">
+                            Kembali ke Dashboard
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- akhir pop up validation -->
+
+                <!-- akhir form jual barang -->
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center justify-center rounded bg-gray-50 h-28">
+                <p class="text-2xl text-gray-400">
+                  <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+                  </svg>
+                </p>
+              </div>
+              <div class="flex items-center justify-center rounded bg-gray-50 h-28">
+                <p class="text-2xl text-gray-400">
+                  <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+                  </svg>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- awal sidebar (aside) -->
+      <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 mt-10 h-screen pt-20 transition-transform -translate-x-full bg-blue-600 border-r border-gray-200 sm:translate-x-0" aria-label="Sidebar">
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-blue-600">
+          <ul class="space-y-2 font-medium">
+            <!-- dashbord -->
+            <li>
+              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-white hover:text-black">
+                <svg class="flex-shrink-0 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+                  <path
+                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+                </svg>
+                <span class="ms-3">Dashboard</span>
+              </a>
+            </li>
+
+            <!-- product -->
+            <li>
+              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-white hover:text-black">
+                <svg class="flex-shrink-0 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
+              </a>
+            </li>
+
+            <!-- users -->
+            <li>
+              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-white hover:text-black">
+                <svg class="flex-shrink-0 w-5 h-5 transition duration-75" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                  <path
+                    d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
+              </a>
+            </li>
+
+            <!-- notifikasi -->
+            <li>
+              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-white hover:text-black">
+                <i class="fa-solid fa-bell text-xl font-semibold"></i>
+                <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
+                <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-600 bg-white rounded-full">3</span>
+              </a>
+            </li>
+
+            <!-- user -->
+            <li>
+              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-white hover:text-black">
+                <i class="fa-solid fa-user text-xl"></i>
+                <span class="flex-1 ms-3 whitespace-nowrap">User</span>
+              </a>
+            </li>
+
+            <!-- Appearance -->
+            <li>
+              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-white hover:text-black">
+                <i class="fa-solid fa-image text-xl"></i>
+                <span class="flex-1 ms-3 whitespace-nowrap">Appearance</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="space-y-2 mt-4 border-t border-gray-200 pt-4">
+            <!-- log out -->
+            <li class="">
+              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-white hover:text-red-600">
+                <i class="fa-solid fa-power-off text-2xl"></i>
+                <span class="flex-1 ms-3 whitespace-nowrap">Log out</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- akhir sidebar (aside) -->
+    </main>
+    <!-- akhir  main -->
+
+    <!-- cdn flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>
